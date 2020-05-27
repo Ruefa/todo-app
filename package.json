@@ -1,0 +1,22 @@
+{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "Todo phone app",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ruefa/todo-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ruefa/todo-app/issues"
+  },
+  "homepage": "https://github.com/Ruefa/todo-app#readme",
+  "devDependencies": {
+    "serve": "^11.3.1"
+  }
+}
