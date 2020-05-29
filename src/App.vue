@@ -1,19 +1,39 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <button v-on:click="clicked">click mne </button>
+    <ToDoList v-bind:items="todos" id="list"/>
+    <ToDoList v-bind:items="todos" id="days"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  import ToDoList from './components/to-do-list';
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  export default {
+    name: 'App',
+    components: {
+      ToDoList,
+    },
+    data () {
+      return {
+        todos: [
+          {
+            id: 1,
+            msg: 'hello there again'
+          },
+          {
+            id: 2,
+            msg: 'hello there again... again'
+          }
+        ]
+      }
+    },
+    methods: {
+      clicked: function () {
+        console.log(this.todos);
+      }
+    }
   }
-}
 </script>
 
 <style>
@@ -23,6 +43,14 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 30px;
+}
+#list {
+  width: 45%;
+  float:right;
+}
+#days {
+  width: 45%;
+  float:left;
 }
 </style>
